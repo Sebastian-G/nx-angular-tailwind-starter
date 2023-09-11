@@ -1,4 +1,4 @@
 {
   "installDependencies": false,
-  "startCommand": "npm i && npm run start"
+  "startCommand": "npm i -f --include=optional && npm run start"
 }
