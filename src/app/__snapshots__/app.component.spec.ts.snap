@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should match snapshot 1`] = `
+<app-root>
+  <h1
+    class="text-3xl font-bold underline"
+  >
+     Hello nt-angular-starter
+
+  </h1>
+</app-root>
+`;

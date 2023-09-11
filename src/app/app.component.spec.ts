@@ -1,27 +1,26 @@
-import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { MockBuilder, MockedComponentFixture, MockRender } from 'ng-mocks';
+import { Component } from '@angular/core';
 
 describe('AppComponent', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    declarations: [AppComponent]
-  }));
+  let fixture: MockedComponentFixture<AppComponent>;
+  let component: AppComponent;
+
+  beforeEach(() => MockBuilder(AppComponent));
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    fixture = MockRender(AppComponent);
+    component = fixture.point.componentInstance;
+    fixture.detectChanges();
+    expect(component).toBeTruthy();
   });
 
   it(`should have as title 'nt-angular-starter'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('nt-angular-starter');
+    fixture = MockRender(AppComponent);
+    component = fixture.point.componentInstance;
+    fixture.detectChanges();
+    expect(component.title).toEqual('nt-angular-starter');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('nt-angular-starter app is running!');
-  });
+  it('should match snapshot', () => expect(MockRender(AppComponent).point.nativeElement).toMatchSnapshot());
 });
