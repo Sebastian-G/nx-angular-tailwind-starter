@@ -5,8 +5,7 @@ exports[`AppComponent should match snapshot 1`] = `
   <h1
     class="text-3xl font-bold underline"
   >
-     Hello nt-angular-starter
-
+    Hello nt-angular-starter
   </h1>
 </app-root>
 `;
