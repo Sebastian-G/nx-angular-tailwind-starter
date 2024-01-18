@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "nt-angular-starter:build:production"
+              "buildTarget": "nt-angular-starter:build:production"
             },
             "development": {
-              "browserTarget": "nt-angular-starter:build:development"
+              "buildTarget": "nt-angular-starter:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nt-angular-starter:build"
+            "buildTarget": "nt-angular-starter:build"
           }
         },
         "test": {
